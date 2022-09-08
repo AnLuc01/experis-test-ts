@@ -9,7 +9,7 @@ const Subheader = ({image, name, surname, trust} : {image : any, name: string, s
     <Grid container>
         <Grid item xs={2} ><ProfileImage 
         image={image} trust={trust} /></Grid>
-        <Grid item xs={6} ><b style={{color:'black'}}>{name + ' ' + surname || 'loading...'}</b></Grid>
+        <Grid item xs={6} ><b style={{color:'black'}}>{(name|| 'loading') + ' ' +(surname || '...')}</b></Grid>
         <Grid item style={{marginLeft:"20px"}}> 
         <SelectContactButton/>
         </Grid>

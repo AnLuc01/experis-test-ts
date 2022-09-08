@@ -6,12 +6,12 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-  const [cardData, setCardData] = useState([])
+  const [cardData, setCardData] = useState<Array<any>>([{}])
 const getCardData = () =>{
   axios.get(`https://my.api.mockaroo.com/users.json?key=aa675110`)
   .then(res => {
     const data = res.data;
-    setCardData(data)
+  setCardData(data)
   })
 }
 
